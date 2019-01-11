@@ -1,0 +1,53 @@
+
+<h1>Batting Team</h1>
+<div class="row">
+  <table class="table table-hover my-4">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Batsman</th>
+        <th scope="col">Run</th>
+        <th scope="col">Balls</th>
+        <th scope="col">Strike Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let scr1 of ss" >
+        <th scope="row">1</th>
+        <td>{{scr1.name}}</td>
+        <td>{{scr1.runs}}</td>
+        <td>{{scr1.balls}}</td>
+        <td>328.57</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+
+<h1>Bowlling Team</h1>
+<div class="row">
+  <table class="table table-hover my-4">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Bowlers </th>
+        <th scope="col">Overs</th> 
+        <th scope="col">Balls</th>
+        <th scope="col">Run</th>
+        <th scope="col">Eco Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let scr1 of ss">
+        <th scope="row">1</th>
+        <td>{{scr1.name1}}</td>
+        <td>{{scr1.overs}}</td>
+        <td>{{scr1.balls}}</td>
+        <td>{{scr1.runs}}</td>
+        <td>328.57</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

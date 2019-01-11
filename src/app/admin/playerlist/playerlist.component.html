@@ -1,0 +1,102 @@
+
+<h2>
+  TeamPlayers
+</h2>
+
+<div class="container border border-dark my-5 mx-7">
+  <div class="table-responsive">
+    
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>
+            <div class="row" *ngFor="let cc of gg">{{cc.team1}}</div>
+          </h3>
+          <div class="row mx-md-n3 mr-2" >
+            <div class="col-sm-2"> 
+              <input #name placeholder="name">
+            </div>
+            <div class="col-sm-2">
+              <input #designation placeholder="Designation">
+            </div>
+            <div class="col-sm-2">
+              <button (click)="addPlayer(name.value,designation.value)"> Team1Player </button>
+              <!-- <button (click)="delete()"> delete </button> -->
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <h3>
+            <div class="row" *ngFor="let c of gg">{{c.team2}}</div>
+          </h3>
+          <div class="row mx-md-n3 mr-2" >
+            <div class="col-sm-2"> <input #name1 placeholder="name"></div>
+            <div class="col-sm-2">
+              <input #designation1 placeholder="Designation">
+            </div>
+            <div class="col-sm-2">
+              <button (click)="addPlayer1(name1.value,designation1.value)"> Team2Player </button>
+              <!-- <button (click)="delete1()"> delete </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <table class="table my-2">
+            <thead>
+              <tr>
+                
+                <th scope="col">PlayerName</th>
+                <th scope="col">Designation</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr *ngFor="let data of players" style="margin-bottom: 10px;">
+                
+                <td>{{data.name}}</td> 
+                <td>{{data.designation}}</td> 
+              </tr>
+              
+              <button class="btn btn-primary my-3" (click)="Team1Final()">Team1Final</button>
+              
+            </tbody>
+          </table>
+          
+        </div>
+        
+        
+        <div class="col-sm-6">
+          <table class="table my-2">
+            <thead>
+              <tr>
+                
+                <th scope="col">PlayerName</th>
+                <th scope="col">Designation</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr *ngFor="let data1 of players1" style="margin-bottom: 10px;">
+                
+                <td>{{data1.name1}}</td> 
+                <td>{{data1.designation1}}</td> 
+              </tr>
+              
+              <button class="btn btn-primary my-3" (click)="Team2Final()">Team2Final</button>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-primary my-3" (click)="onSubmitClicked()" >NewForm</button>
+
+

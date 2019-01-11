@@ -1,0 +1,29 @@
+
+
+<div class="container">
+  <div class="row">
+    
+    <table class="table">
+      <thead>
+        <tr>
+          
+          <th scope="col">Status</th>
+          <th scope="col">PerBallStatus</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let commen of ccm" style="margin-bottom: 10px;">
+          
+          <td>{{commen.overs}}.{{commen.balls}}</td> 
+          <td>{{commen.runs}}.{{commen.commentry}}</td>
+        </tr>
+        
+        
+        
+      </tbody>
+    </table>
+    
+  </div>
+</div>
+

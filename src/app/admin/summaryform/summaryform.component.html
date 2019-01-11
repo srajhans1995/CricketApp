@@ -1,0 +1,124 @@
+<h2>
+  Bowling Status
+</h2>
+<div class="container border border-dark my-5 mx-5">
+  <div class="table-responsive">
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          
+          <div class="form-group row my-2" *ngIf="showBowler">
+            <div class="col-sm-4">
+              <label for="name">BowlerName</label>
+            </div>
+            <div class="col-sm-4" >
+              <select class="Label form-control" id="name" name="name" #bowlerName>
+                <option selected="">Select player</option>
+                <option *ngFor="let player1 of playerlist1">{{player1.name}}</option>
+                <option *ngFor="let player1 of playerlist2">{{player1.name1}}</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+            </div>
+          </div>
+          
+          <div class="form-group row my-2">
+            <div class="col-sm-4">
+              <label for="">No of runs</label>
+            </div>
+            <div class="col-sm-4">
+              <select class="Label form-control" (change)="onRunsClick()" id="runs" #runs>
+                <option selected="">Select runs</option>
+                <option value="Dotball">0</option>
+                <option value="1run..">1</option>
+                <option value="2runs..">2</option>
+                <option value="3runs..">3</option>
+                <option value="4runs..">4</option>
+                <option value="6runs..">6</option>
+                <option value="Wicket">W</option>
+                
+              </select>
+            </div>
+            <div class="col-sm-4">
+            </div>
+          </div>
+          
+          
+          <div class="form-group row my-2" *ngIf="showWicketType">
+            <div class="col-sm-4">
+              <label for="" >Wicket Type</label>
+            </div>
+            <div class="col-sm-4">
+              <select class="Label form-control" id="wicket" (change)="onWicketType()" #wicket >
+                <option selected="">Select wicket type</option>
+                <option value="Catch">Catch</option>
+                <option value="">Bold</option>
+                <option value="">Runout</option>
+                
+              </select>
+            </div>
+            <div class="col-sm-4">
+            </div>
+          </div>
+          
+          
+          <div class="form-group row my-2" *ngIf="showCatchBy">
+            <div class="col-sm-4">
+              <label for="name" >Catch by</label>
+            </div>
+            <div class="col-sm-4">
+              <select class="Label form-control" id="name" name="name" #catch>
+                <option selected="">Select player</option>
+                <option *ngFor="let player1 of playerlist1">{{player1.name}}</option>
+                <option *ngFor="let player1 of playerlist2">{{player1.name1}}</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+            </div>
+          </div>
+          
+          <div class="form-group row my-2">
+            <div class="col-sm-4">
+              <label for="">Balls</label>
+            </div>
+            <div class="col-sm-4">
+              <input type="text" class="Label form-control" id="balls"  [value]="numballs" [disabled]="txtBalls" #balls>
+            </div>
+            <div class="col-sm-4">
+            </div>
+          </div>
+          
+          
+          <div class="form-group row my-2">
+            <div class="col-sm-4">
+              <label for="" >Overs</label>
+            </div>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" [value]="numovers" id="overs" [disabled]="txtOver" placeholder="overs" #overs> 
+            </div>
+            <div class="col-sm-4">
+            </div>
+          </div>
+          
+          
+          <div class="form-group row my-2">
+            <div class="col-sm-4">
+              
+              
+              
+              <label for="">Commentry</label>
+            </div>
+            <div class="col-sm-4">
+              <textarea rows="2" cols="40" #commentry></textarea> </div>
+              <div class="col-sm-4">
+              </div>
+            </div>
+            
+            
+            <button class="btn btn-primary my-2" (click)="onSubmitClicked()">SubmitForm</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
